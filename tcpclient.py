@@ -58,7 +58,7 @@ def tcp(host, port, bot_command, user, options):
             line = readline(sock)
             print( line )
             if not line:
-                break
+                continue # bad connection, keep on trying
             if line.startswith("INFO:"):
                 continue
             bot_input += line + "\n"
@@ -68,7 +68,7 @@ def tcp(host, port, bot_command, user, options):
                 break
             if line.startswith("go"):
                 break
-                
+            
         if line.startswith("end"):
             break
             
