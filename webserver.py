@@ -126,7 +126,7 @@ class AntsGameHandler(SimpleHTTPServer.SimpleHTTPRequestHandler):
         </head><body>
         &nbsp;
         <a href='/' name=top> Latest Games </a> &nbsp;&nbsp;&nbsp;&nbsp;
-        <a href='/ranking' title='just try a bit harder'> Rankings </a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href='/ranking'> Rankings </a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <a href='/tcpclient.py' title='get the python client'> Client.py </a>
         <br><p>
         """
@@ -299,7 +299,7 @@ class AntsGameHandler(SimpleHTTPServer.SimpleHTTPRequestHandler):
         
 
     def serve_file(self, match):
-        mime = {'png':'image/png','jpg':'image/jpeg','jpeg':'image/jpeg','gif':'image/gif','js':'text/javascript'}
+        mime = {'png':'image/png','jpg':'image/jpeg','jpeg':'image/jpeg','gif':'image/gif','js':'text/javascript','py':'application/python'}
         junk,end = match.group(0).split('.')
         try:
             mime_type = mime[end]

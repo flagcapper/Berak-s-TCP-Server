@@ -34,7 +34,7 @@ def main():
 	tcp_port = 2081
 
 	tcp_opts = {
-		'turns':150,
+		'turns':350,
 		'loadtime': 3000, 
 		'turntime': 2000,
 		'viewradius2': 55,
